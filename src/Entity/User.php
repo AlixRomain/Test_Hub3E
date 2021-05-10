@@ -6,6 +6,8 @@ use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
+use JMS\Serializer\Annotation\Type;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -27,7 +29,10 @@ class User implements UserInterface
      */
     private $email;
 
+
     /**
+     * @Type("array")
+     *
      * @ORM\Column(type="json")
      */
     private $roles = [];
