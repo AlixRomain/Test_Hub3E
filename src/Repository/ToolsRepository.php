@@ -19,22 +19,22 @@ class ToolsRepository extends ServiceEntityRepository
         parent::__construct($registry, Tools::class);
     }
 
-    // /**
-    //  * @return Tools[] Returns an array of Tools objects
-    //  */
-    /*
-    public function findByExampleField($value)
+     /**
+      * @return Tools[] Returns an array of Tools objects
+      */
+
+    /*public function findByUser($value)
     {
         return $this->createQueryBuilder('t')
-            ->andWhere('t.exampleField = :val')
+            ->select(['id', 'name', 'description'])
+            ->from('tools','t')
+            ->andWhere('t.relation = :val')
             ->setParameter('val', $value)
-            ->orderBy('t.id', 'ASC')
-            ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
-    }
-    */
+    }*/
+
 
     /*
     public function findOneBySomeField($value): ?Tools

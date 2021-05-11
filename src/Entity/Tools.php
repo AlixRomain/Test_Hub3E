@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ToolsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\Groups;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ToolsRepository::class)
@@ -18,11 +20,13 @@ class Tools
     private $id;
 
     /**
+     * @Assert\NotBlank(groups="Create", groups="Update")
      * @ORM\Column(type="string", length=255)
      */
     private $name;
 
     /**
+     * @Assert\NotBlank(groups="Create", groups="Update")
      * @ORM\Column(type="string", length=255)
      */
     private $description;
