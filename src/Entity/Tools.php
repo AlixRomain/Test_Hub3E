@@ -4,11 +4,29 @@ namespace App\Entity;
 
 use App\Repository\ToolsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use JMS\Serializer\Annotation\Groups;
+use Hateoas\Configuration\Annotation as Hateoas;
+use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ToolsRepository::class)
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "tools_show",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute= true
+ *      )
+ * )
+ * @Hateoas\Relation(
+ *      "self",
+ *      href = @Hateoas\Route(
+ *          "tools_all_user_show",
+ *          parameters = { "id" = "expr(object.getId())" },
+ *          absolute= true
+ *      )
+ * )
+ *
  */
 class Tools
 {

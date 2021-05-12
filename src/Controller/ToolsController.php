@@ -9,6 +9,7 @@ use App\Repository\ToolsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\Controller\Annotations\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
@@ -21,11 +22,9 @@ class ToolsController extends AbstractFOSRestController
     private $em;
     private $repoTools;
 
-
     public function __construct( EntityManagerInterface $em, ToolsRepository $repoTools){
         $this->em = $em;
         $this->repoTools = $repoTools;
-
     }
     /**
      *
@@ -34,13 +33,13 @@ class ToolsController extends AbstractFOSRestController
      *     name = "tools_show",
      *     requirements={"id"="\d+"}
      * )
-     * @Rest\View()
+     * @Rest\View(serializerGroups={"Default"})
      * @IsGranted("ROLE_USER")
      * @Security("tools.getRelation() === user || is_granted('ROLE_ADMIN')")
      */
     public function getToolsMethod(Tools $tools)
     {
-        return $tools;
+
     }
     /**
      * @Rest\Get(
@@ -48,9 +47,10 @@ class ToolsController extends AbstractFOSRestController
      *     name = "tools_all_user_show",
      *     requirements={"id"="\d+"}
      * )
-     * @Rest\View()
+     * @Rest\View(serializerGroups={"default","tools"})
      * @IsGranted("ROLE_USER")
      * @Security("userr.getId() === user.getId() || is_granted('ROLE_ADMIN')")
+     * @return User
      */
     public function getAllToolsByUserMethod(User $userr)
     {

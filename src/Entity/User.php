@@ -10,10 +10,12 @@ use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\Type;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation as JMS;
 
 /**
  * @UniqueEntity(
- *     fields={"mail"},
+ *     fields={"email"},
  *     message="L'adresse mail {{ value }} est déjà inscrit en base"
  * )
  * @Serializer\ExclusionPolicy("all")
@@ -26,6 +28,7 @@ class User implements UserInterface
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
+     * @Serializer\Groups("tools")
      * @ORM\Column(type="integer")
      * @Serializer\Expose
      */
@@ -33,7 +36,13 @@ class User implements UserInterface
 
     /**
      * @Serializer\Expose
+     * @Serializer\Groups("tools")
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotBlank(groups="Create")
+     * @Assert\Email()
+     * @Assert\Length(
+     *     max = 255
+     * )
      */
     private $email;
 
@@ -43,22 +52,40 @@ class User implements UserInterface
      *
      * @ORM\Column(type="json")
      */
-    private $roles = [];
+    private $roles = ['ROLE_USER'];
 
     /**
      * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(groups="Create")
+     * @Assert\Length(
+     *     min = 8,
+     *     max = 255
+     * )
+     * @Serializer\Expose()
+     * @Assert\Regex(
+     *     pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W)^",
+     *     match = true,
+     *     message = "Password must contain at least one lowercase, one uppercase, one digit and one special character !"
+     * )
      */
     private $password;
 
     /**
      * @Serializer\Expose
+     * @Serializer\Groups("tools")
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(groups="Create")
+     * @Assert\Length(
+     *     min = 3,
+     *     max = 25
+     * )
      */
     private $username;
 
     /**
      * @ORM\OneToMany(targetEntity=Tools::class, mappedBy="relation")
+     * @Serializer\Groups("tools")
      * @Serializer\Expose
      */
     private $tools;
