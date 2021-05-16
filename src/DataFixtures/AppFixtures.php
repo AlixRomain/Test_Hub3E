@@ -33,7 +33,7 @@ class AppFixtures extends Fixture
             $user->setUsername($this->faker->userName)
                 ->setEmail($this->faker->email)
                 ->setRoles(User::ROLE_USER)
-                ->setPassword($this->encoder->encodePassword($user, "Hub3E2021"));
+                ->setPassword($this->encoder->encodePassword($user, "Hub3E2021!"));
             $manager->persist($user);
 
             $newTools = new Tools();
@@ -42,11 +42,18 @@ class AppFixtures extends Fixture
                 ->setRelation($user);
             $manager->persist($newTools);
         }
-        $user = new User();
+        $simpleUser = new User();
+        $simpleUser->setUsername("user")
+            ->setEmail("user@user.fr")
+            ->setRoles(User::ROLE_USER)
+            ->setPassword($this->encoder->encodePassword($simpleUser, "Hub3E2021!"));
+        $manager->persist($simpleUser);
+
+    $user = new User();
         $user->setUsername("admin")
             ->setEmail("admin@admin.fr")
             ->setRoles(User::ROLE_ADMIN)
-            ->setPassword($this->encoder->encodePassword($user, "Hub3E2021"));
+            ->setPassword($this->encoder->encodePassword($user, "Hub3E2021!"));
         $manager->persist($user);
 
         $manager->flush();

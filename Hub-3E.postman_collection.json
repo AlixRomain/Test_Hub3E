@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "bc4b4ea6-1056-4ae0-ac41-3ee3f89910d2",
+		"name": "Hub-3E",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Récupérer un outil",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzI5MzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/tools/27",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tools",
+						"27"
+					]
+				},
+				"description": "Récup^érer un outil par son ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer tous les outils d'un user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA4MDYyODgsImV4cCI6MTYyMDgwOTg4OCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.NcN0PvMgwZfJgBZGATOw4d4kzIY7LvONHrDztFeSPEeSN-sLU3RRSnsDeNxAJAumAs2RpleBFahCtfGRWD42_H-ZhDBLcbSG3jd4xwIVf1QP4koz2D_mXPfL6dlNHZWZDt2Yas9ABeS8-IPn3LSIzIZf07FdUZDG9xW2e7cp5hl_otB8e-1gUS1ASnQErBmtjvKOV4GRyi_9f_xV5Cdh8peh18ut47XRO27qR_6hriHoQ94XXXtfYqnoUj_uVoinZRky1P6wOxT_-EX4NDMp7T8p32KrWmuVpij2iuj_J45DCMSyhhOs933u-GVY1keyb681evyBAahBGDZx_O43MemjecFKGvVMYvXavt_h-pQNV4goW8_yMz8Z31VAf0tklWIpaarKwgHKEBlTIpIiTs9F4sFf_CNH-7T0-LjmNnl4O8E0NE-jG7MyMBoR6bvEIDwiSi3Z8K_PZy2G3eALcgABdc7cX-AVlTDSiLkSZdQJBv_eb1WZ04TWpJhti82SCkEOaGfs58aHFIEnHjHc7CdYhnfix99-QyeaGyMAfftlq8MSQMqFr0Uf7YQDAJ3Qvy6LaCA8ZIxRWQcdirMeS9v0C3Le8-GBx6vRiiE104158nc6Qvt8soxYRQqfW-tKq2ywk_LcalL_3avNxFlaXZSFiQJJxO9kVkF54Tj0LkU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/tools/user/26",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tools",
+						"user",
+						"26"
+					]
+				},
+				"description": "Récup^érer un outil par son ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Associer un outil à un utilisateur",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzI5MzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Perceuse Bosch\",\r\n    \"description\": \"Perceuse filaire 500 W\",\r\n     \"relation\": {\r\n        \"id\": 25,\r\n        \"email\": \"anastasie.laroche@orange.fr\",\r\n        \"roles\": [\r\n            \"ROLE_USER\"\r\n        ],\r\n        \"password\": \"$argon2id$v=19$m=65536,t=4,p=1$a2x1cE9LLjV4aXJFa2R3TQ$mD5aSIqr8HE/pI4ComLZkuO+sNCVS/Pv5tqni+FLor8\",\r\n        \"username\": \"camille.normand\",\r\n        \"tools\": []\r\n    }\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/add-tools",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-tools"
+					]
+				},
+				"description": "Ajouter un outil associer à un user"
+			},
+			"response": []
+		},
+		{
+			"name": "Ajouter un outil",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzIMzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Perceuse Bosch\",\r\n    \"description\": \"Perceuse filaire 500 W\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/add-tools",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"add-tools"
+					]
+				},
+				"description": "Ajouter un nouvel outil"
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer tous les outils",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzI5MzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/tools",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tools"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modifier un outil",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzI5MzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 27,\r\n    \"name\": \"Bile mo II\",\r\n    \"description\": \"Test d'update\",\r\n    \"relation\": {\r\n        \"id\": 67,\r\n        \"email\": \"noel.olivie@chauveau.fr\",\r\n        \"roles\": [\r\n            \"ROLE_USER\"\r\n        ],\r\n        \"password\": \"$argon2id$v=19$m=65536,t=4,p=1$Vmx4ZUZSOFFiNDYuaEttTg$emWXMzcuQGUN8qcpmqq+6drPIRIIg4IDzoui0/cCD/s\",\r\n        \"username\": \"maurice.virginie\",\r\n        \"tools\": []\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/update-tools/27",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update-tools",
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer un outil",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjA3MzI5MzUsImV4cCI6MTYyMDczNjUzNSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGFkbWluLmZyIn0.AnbUNrz3jCMK7sdmORzLJRNIEJT-KNemYpmXWwL9qz0E_kznEKMHk6mmjPVpeyjeGjil__XSoxXUwMGqDQtb_XpIOlrBvjL0ViG6tQJU40LZicM07F8wndRh7sYbCOgSnOb5AbXHcJgrevAuo84jhyLerI2K0xcdfV7VwCsPvvwSbA27xstcvDSr_6D1osejDqy0nEVcbE95z1FqdU-Xc6RWNahQtJuXimWu8o4cyNvrH3P0fC34-j-S38brtBOAwaxuUGEXHyvE61N4TOTDYgwb0di3rULni5CPoRH5_MJyIWNWATgDC6xbM_bOgB7it_JgrxSvr4HZ9h09ExynU88RFUSnsyIzZnCXxh1TsGg6qenFFvM8fPmzBhuEm5-hybEDtDrUElw2ej66g8FwWgQWl663A_-2z_Q2j01QrWTmMqKYaVzJwNNTOLIvkOPym2Vh0FoQrsRJrv4Rs2x_hDXIEI102WqKTEp9ActS7fMCC9IpZCCxWcaQOuypTavD90XJZb0ol7juTF4uQfM5xN9sm6umeZM3ksTYLklVSKcgjZCKn5vDPNY4ZOZR3c5sfuRJBHUIhCMdVTVxKTyPesjKylTMOIxYb0dDOBr4K_l6sdbzLDFRvUuqTp5TttesN56lmrULqVBOkK3DZ9nhwnF9khZD0QqYeJYpdYdLFrw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/delete-tools/49",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete-tools",
+						"49"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupération Token Hub3E USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mail\":\"user@user.fr\",\r\n    \"password\":\"Hub3E2021!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/login_check",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupération Token Hub3E ADMIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mail\":\"admin@admin.fr\",\r\n    \"password\":\"Hub3E2021!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/api/login_check",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inscription à la plateforme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"tata@todea.com\",\r\n    \"password\" : \"tata123!Z\",\r\n    \"username\" : \"tatdvfvfvrfvrva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://127.0.0.1:8000/inscription",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"inscription"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MTE3NTg2MTksImV4cCI6MTYxMTc2MjIxOSwicm9sZXMiOlsiUk9MRV9NQU5BR0VSIl0sInVzZXJuYW1lIjoidGF0YUB0YXRhLmNvbSJ9.EUbw-Cj75X0nPftV03epORuNL5T59eCUzx_hy8FOaFAQ2accGyZlm93CAjYsyjPv-Wzfde7mIyGn4FZh-ay1sBn5xeoDc9ZrpkJ7nqW8wlou2yTlzN1d-FYli6PEkurICPQa0UPVQ5xG-_RPA8zxT9KAmY4WScSo1In7I9ZSkAaprV0P5B1DDiYCbxdr0Juzyw1p9rQlyB8DkWQrPxwbZH841OEJh2nu5u_QuvT-xHT5Np9k1INSmiE52biG0Pi-YDxwnThMo8KiqQDSUpovHD9jr-_nkt-0a2oe4pErYKZanQI9Vu-Fse16hnLF6TbuW6nUOLLEIqvVkJYLIzi50ZHK2C-396Bior2Ain6DOD3ckRSB2v5aw0MrWc0i-MI5tSeZzLEy4Cgk-hEYiLVlYtQTuKmA9CqkDPK7bBzuL-5_Ub1eduZC1e946Yr2uEPa6OXcuf34KBas5Lkpxk3imV2tRUAfpIqlNDvHmUpDyaxzM7Dhf-9UTD-5gCX7Vi5VxpwXydxLxOTLcJGvHRHFL3zYx385ylLzcGJbq5BvKBmL1TSpwv7wmMoR8xymRJIvS5lEC75g_ErDXxET9Pk-ku7ajBPKB88mIAmnkebOM9AI3UaqDVAsVKU19Na4jGc18XlK9Ru1psvC03J28sw37xmxP1JjQuShb923kDyVoEo",
+				"type": "string"
+			}
+		]
+	}
+}
