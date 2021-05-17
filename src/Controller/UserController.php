@@ -32,7 +32,7 @@ class UserController extends AbstractFOSRestController
      *     path = "inscription",
      *     name = "register",
      * )
-     * @Rest\View(StatusCode = 201, serializerGroups={"Create"})
+     * @Rest\View(StatusCode = 201, serializerGroups={"register"})
      * @ParamConverter(
      *     "user",
      *      converter="fos_rest.request_body",
@@ -55,7 +55,6 @@ class UserController extends AbstractFOSRestController
                 );
             }
             throw new ResourceValidationException($message);
-            //return $this->view($violations, Response::HTTP_BAD_REQUEST);
         }
         $user->setPassword($encoder->encodePassword($user, $user->getPassword()));
         $this->em->persist($user);

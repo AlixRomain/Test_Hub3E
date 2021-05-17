@@ -34,18 +34,24 @@ class Tools
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     * @Serializer\Expose
+     * @Serializer\Groups({"tools"})
      */
     private $id;
 
     /**
      * @Assert\NotBlank(groups="Create", groups="Update")
      * @ORM\Column(type="string", length=255)
+     * @Serializer\Expose
+     * @Serializer\Groups({"tools"})
      */
     private $name;
 
     /**
      * @Assert\NotBlank(groups="Create", groups="Update")
      * @ORM\Column(type="string", length=255)
+     * @Serializer\Expose
+     * @Serializer\Groups({"tools"})
      */
     private $description;
 

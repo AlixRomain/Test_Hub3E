@@ -47,7 +47,7 @@ class ToolsController extends AbstractFOSRestController
      *     name = "tools_all_user_show",
      *     requirements={"id"="\d+"}
      * )
-     * @Rest\View(serializerGroups={"default","tools"})
+     * @Rest\View(serializerGroups={"tools"})
      * @IsGranted("ROLE_USER")
      * @Security("userr.getId() === user.getId() || is_granted('ROLE_ADMIN')")
      * @return User
